@@ -44,6 +44,7 @@ class DrinkController extends Controller
         $drink->price = $request->input('price');
         $drink->brand = $request->input('brand');
         $drink->type = $request->input('type');
+        $drink->stock = $request->input('stock');
         $drink->description = $request->input('description');
         
         if($request->hasFile('picture'))

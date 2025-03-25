@@ -12,7 +12,7 @@
 
                     <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
 
-                        <div class="sm:col-span-4">
+                        <div class="col-span-full">
                             <label for="name" class="block text-sm/6 font-medium ">Ürün Adı</label>
                             <div class="mt-2">
                                 <div
@@ -23,7 +23,7 @@
                             </div>
                         </div>
 
-                        <div class="sm:col-span-4">
+                        <div class="col-span-full">
                             <label for="brand" class="block text-sm/6 font-medium ">Marka</label>
                             <div class="mt-2">
                                 <div
@@ -34,7 +34,7 @@
                             </div>
                         </div>
 
-                        <div class="sm:col-span-3">
+                        <div class="col-span-full">
                             <label for="type" class="block text-sm/6 font-medium ">Tür</label>
                             <div class="mt-2 grid grid-cols-1">
                                 <select id="type" name="type"
@@ -42,7 +42,7 @@
                                     <option selected value="Bira">Bira</option>
                                     <option value="Kokteyl">Kokteyl</option>
                                     <option value="Shot">Shot</option>
-                                    <option value="Aparitif">Aparatif</option>
+                                    <option value="Aperitif">Aperitif</option>
                                 </select>
                                 <svg class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4"
                                     viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
@@ -53,7 +53,7 @@
                             </div>
                         </div>
 
-                        <div class="sm:col-span-4">
+                        <div class="col-span-full">
                             <label for="price" class="block text-sm/6 font-medium ">Fiyat</label>
                             <div class="mt-2">
                                 <div
@@ -63,6 +63,15 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="col-span-full">
+                          <label for="stock" class="block text-sm/6 font-medium text-center">Stok Var/Yok</label>
+                          <div class="m-2">
+                              <div class="flex items-center rounded-md">
+                                  <input type="checkbox" name="stock" id="stock" class="block min-w-0 grow py-1.5 pr-3 pl-1 focus:outline-none sm:text-sm/6" value="1" checked>
+                              </div>
+                          </div>
+                      </div>
 
                         <div class="col-span-full">
                             <label for="description" class="block text-sm/6 font-medium ">Açıklama</label>
@@ -99,9 +108,8 @@
             </div>
 
             <div class="mt-6 flex items-center justify-end gap-x-6">
-                <button type="button" class="text-sm/6 font-semibold ">İptal Et</button>
-                <button type="submit"
-                    class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Kaydet</button>
+                <a href="{{route('drinks')}}" type="button" class="bg-yellow-600 m-2 p-2 rounded">İptal Et</a>
+                <button type="submit" class="bg-blue-600 m-2 p-2 rounded">Kaydet</button>
             </div>
         </form>
 
