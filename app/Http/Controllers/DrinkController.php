@@ -91,6 +91,8 @@ class DrinkController extends Controller
      */
     public function destroy(Drink $drink)
     {
-        //
+        $drink->delete();
+        return redirect()->route('drinks')
+                        ->with('success','Ürün başarıyla silindi.');
     }
 }

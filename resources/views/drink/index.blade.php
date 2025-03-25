@@ -81,12 +81,17 @@
           </td>
           <td class="p-4 border-b border-slate-700 bg-slate-800">
             <p class="text-sm text-slate-300 text-center">
-              <a href="#" class="block text-sm font-semibold text-slate-800 bg-yellow-500 rounded-lg p-1">
+              <a href="#" class="block bg-yellow-700 p-2 m-2 w-full rounded shadow hover:shadow-md">
                 Düzenle
               </a>
-              <a href="#" class="block text-sm font-semibold text-slate-800 bg-red-500 rounded-lg p-1 mt-1">
+              {{-- <a href="#" class="block text-sm font-semibold text-slate-800 bg-red-500 rounded-lg p-1 mt-1">
                 Sil
-              </a>
+              </a> --}}
+              <form method="POST" action="{{route('drink.destroy', $drink)}}">
+                @csrf
+                @method('DELETE')
+                <button type="submit" onclick="return confirm('Silmek istediğine emin misin?')" class="block bg-red-500 p-2 m-2 w-full rounded shadow hover:shadow-md">Sil</button>
+            </form>
             </p>
         </td>
           </tr>
