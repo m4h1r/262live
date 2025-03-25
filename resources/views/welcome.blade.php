@@ -266,7 +266,7 @@
         
         {{-- Aperitifler Start --}}
         <div class="pb-4" id="aperitifler">
-          <h1 class="text-5xl text-center py-2">aperitifler </h1>
+          <h1 class="text-5xl text-center py-2">Aperitifler</h1>
           <hr class="p-4 text-white">
           <div class="grid gap-2 grid-cols-1 md:grid-cols-2">
         
