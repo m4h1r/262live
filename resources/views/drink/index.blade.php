@@ -2,7 +2,7 @@
     <div class="flex h-full w-full flex-1 flex-col gap-4 rounded-xl">
 
 
-      <a href="#" class="block text-sm font-semibold text-slate-800 bg-blue-500 rounded-lg p-2 text-center">
+      <a href="{{route('add')}}" class="block text-sm font-semibold text-slate-800 bg-blue-500 rounded-lg p-2 text-center">
         Ekle
       </a>
 
@@ -10,7 +10,7 @@
       <div class="relative flex flex-col w-full h-full overflow-scroll text-slate-300 bg-slate-800 shadow-md rounded-lg bg-clip-border">
         <table class="w-full text-left table-auto min-w-max">
           <thead>
-              <tr>
+              <tr class="text-center">
                   <th class="p-4 border-b border-slate-600 bg-slate-700">
                       <p class="text-sm font-normal leading-none text-slate-300">
                           Resim
@@ -49,7 +49,12 @@
             <tr class="hover:bg-slate-700">
               <td class="p-4 border-b border-slate-700 bg-slate-900">
                   <p class="text-sm text-slate-100 text-center">
+                    @if ( substr($drink->picture, 0, 4) == "http")
                       <img class="w-16 rounded mx-auto" src="{{ $drink->picture }}" alt="" srcset="">
+                    @else
+                      <img class="w-16 rounded mx-auto" src="assets/img/{{ $drink->picture }}" alt="" srcset="">
+                    @endif
+                      
                   </p>
               </td>
               <td class="p-4 border-b border-slate-700 bg-slate-800">
@@ -67,7 +72,7 @@
                   {{ $drink->type }}
                 </p>
             </td>
-            <td class="p-4 border-b border-slate-700 bg-slate-800">
+            <td class="p-4 border-b border-slate-700 bg-slate-900">
               <p class="text-sm text-slate-300 text-center">
                 {{ number_format($drink->price,2) }} ₺
                 <br>

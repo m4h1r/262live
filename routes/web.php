@@ -15,8 +15,8 @@ Route::middleware('auth')->group(function () {
     // Route::get('/dashboard', [BackEndController::class, 'dashboard'])->name('dashboard');
 
     Route::get('drinks', [DrinkController::class, 'index'])->name('drinks');
-    // Route::get('add-adage', [AdageController::class, 'create'])->name('add-adage');
-    // Route::post('insert-adage', [AdageController::class, 'store'])->name('insert-adage');
+    Route::get('add', [DrinkController::class, 'create'])->name('add');
+    Route::post('insert', [DrinkController::class, 'store'])->name('insert');
     // Route::get('adages/edit/{id}', [AdageController::class, 'edit']);
     // Route::put('update-adage/{id}', [AdageController::class, 'update']);
     // Route::delete('adages/{adage}', [AdageController::class, 'destroy'])->name('adage.destroy');

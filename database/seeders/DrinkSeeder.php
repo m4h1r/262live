@@ -125,7 +125,7 @@ class DrinkSeeder extends Seeder
 
         Drink::insert([
             'id' => '11',
-            'type' => 'Extra',
+            'type' => 'Aparatif',
             'name' => 'Çerez Tabağı',
             'brand' => '-',
             'description' => 'Karışık çerez tabağı',
@@ -136,7 +136,7 @@ class DrinkSeeder extends Seeder
 
         Drink::insert([
             'id' => '12',
-            'type' => 'Extra',
+            'type' => 'Aparatif',
             'name' => 'Turşu Tabağı',
             'brand' => '-',
             'description' => 'İnce dilimlenmiş turşu tabağı.',

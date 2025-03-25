@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreDrinkRequest;
 use App\Http\Requests\UpdateDrinkRequest;
+use Illuminate\Http\Request;
 use App\Models\Drink;
 
 class DrinkController extends Controller
@@ -13,7 +14,7 @@ class DrinkController extends Controller
      */
     public function index()
     {
-        $drinks = Drink::all();
+        $drinks = Drink::paginate(20)->sortByDesc('created_at');
         return view('drink.index', compact('drinks'));
     }
 
@@ -28,15 +29,36 @@ class DrinkController extends Controller
      */
     public function create()
     {
-        //
+        return view('drink.add');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreDrinkRequest $request)
+    public function store(Request $request)
     {
-        //
+
+        $drink = new Drink();
+
+        $drink->name = $request->input('name');
+        $drink->price = $request->input('price');
+        $drink->brand = $request->input('brand');
+        $drink->type = $request->input('type');
+        $drink->description = $request->input('description');
+        
+        if($request->hasFile('picture'))
+        {
+            $file = $request->file('picture');
+            $ext = $file->getClientOriginalExtension();
+            $filename = time().'.'.$ext;
+            $file->move('assets/img',$filename);
+            $drink->picture = $filename;
+        }
+
+        $drink->save();
+   
+        return redirect()->route('drinks')
+                        ->with('success','Ürün başarıyla eklendi.');
     }
 
     /**

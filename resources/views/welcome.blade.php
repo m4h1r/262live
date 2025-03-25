@@ -62,7 +62,7 @@
         
                     <li class="flex items-center">
                     <a class="text-white lg:hover:text-blueGray-200 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                        href="#extras" onclick="toggleNavbar('collapse-navbar')">Ekstralar</a>
+                        href="#extras" onclick="toggleNavbar('collapse-navbar')">Aparatifler</a>
                     </li>
             
                     <li class="flex items-center">
@@ -254,12 +254,12 @@
         
         {{-- Extras Start --}}
         <div class="pb-4" id="extras">
-          <h1 class="text-5xl text-center py-2">Ekstralar</h1>
+          <h1 class="text-5xl text-center py-2">Apartifler</h1>
           <hr class="p-4 text-white">
           <div class="grid gap-2 grid-cols-1 md:grid-cols-2">
         
               @foreach ($drinks as $drink)
-              @if ($drink->type=="Extra")
+              @if ($drink->type=="Aparatif")
         
               <div class="bg-gray-900 rounded-xl text-white flex overflow-hidden h-48">
                   <div class="col-span-1 w-1/3 flex justify-center">
