@@ -10,6 +10,9 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+        <link rel="icon" href="favicon.png" type="image/x-icon"> 
+        <link rel="apple-touch-icon" href="favicon.png">
 
         <!-- Styles / Scripts -->
         @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
@@ -32,44 +35,44 @@
                 </a>
                     <button class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
                     type="button"
-                    onclick="toggleNavbar('example-collapse-navbar')">
+                    onclick="toggleNavbar('collapse-navbar')">
                     <i class="text-white fas fa-bars"></i>
                 </button>
                 </div>
                 <div
-                class="lg:flex flex-grow items-center bg-black lg:bg-opacity-0 lg:shadow-none hidden"
-                id="example-collapse-navbar">
+                class="lg:flex flex-grow items-center lg:bg-opacity-0 lg:shadow-none hidden"
+                id="collapse-navbar">
                 <ul
                     class="flex flex-col lg:flex-row list-none lg:ml-auto items-center">
             
                     <li class="flex items-center">
-                    <a class="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                        href="#biralar" onclick="toggleNavbar('example-collapse-navbar')">Biralar</a>
+                    <a class="text-white lg:hover:text-blueGray-200 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                        href="#biralar" onclick="toggleNavbar('collapse-navbar')">Biralar</a>
                     </li>
         
                     <li class="flex items-center">
-                    <a class="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                        href="#kokteyller" onclick="toggleNavbar('example-collapse-navbar')">Kokteyller</a>
+                    <a class="text-white lg:hover:text-blueGray-200 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                        href="#kokteyller" onclick="toggleNavbar('collapse-navbar')">Kokteyller</a>
                     </li>
         
                     <li class="flex items-center">
-                    <a class="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                        href="#shotlar" onclick="toggleNavbar('example-collapse-navbar')">Shot'lar</a>
+                    <a class="text-white lg:hover:text-blueGray-200 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                        href="#shotlar" onclick="toggleNavbar('collapse-navbar')">Shot'lar</a>
                     </li>
         
                     <li class="flex items-center">
-                    <a class="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                        href="#extras" onclick="toggleNavbar('example-collapse-navbar')">Ekstralar</a>
+                    <a class="text-white lg:hover:text-blueGray-200 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                        href="#extras" onclick="toggleNavbar('collapse-navbar')">Ekstralar</a>
                     </li>
             
                     <li class="flex items-center">
-                    <a class="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                        href="#ulasim" onclick="toggleNavbar('example-collapse-navbar')">Ulaşım</a>
+                    <a class="text-white lg:hover:text-blueGray-200 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                        href="#ulasim" onclick="toggleNavbar('collapse-navbar')">Ulaşım</a>
                     </li>
             
                     <li class="flex items-center">
-                    <a class="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                        href="#iletisim" onclick="toggleNavbar('example-collapse-navbar')">İletişim</a>
+                    <a class="text-white lg:hover:text-blueGray-200 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                        href="#iletisim" onclick="toggleNavbar('collapse-navbar')">İletişim</a>
                     </li>
             
                 </ul>
@@ -90,23 +93,23 @@
           <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
                <!-- Item 1 -->
               <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                  <img src="/assets/img/slider1.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                  <img src="/assets/img/slider1.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="262 Live Pub Görsel 1">
               </div>
               <!-- Item 2 -->
               <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                  <img src="/assets/img/slider2.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                  <img src="/assets/img/slider2.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="262 Live Pub Görsel 2">
               </div>
               <!-- Item 3 -->
               <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                  <img src="/assets/img/slider3.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                  <img src="/assets/img/slider3.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="262 Live Pub Görsel 3">
               </div>
               <!-- Item 4 -->
               <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                  <img src="/assets/img/slider4.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                  <img src="/assets/img/slider4.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="262 Live Pub Görsel 4">
               </div>
               <!-- Item 5 -->
               <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                  <img src="/assets/img/slider5.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                  <img src="/assets/img/slider5.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="262 Live Pub Görsel 5">
               </div>
           </div>
           <!-- Slider indicators -->
@@ -312,25 +315,25 @@
                   <div class="mt-6 lg:mb-0">
         
                     <button class="bg-white text-green-400 shadow-sm hover:shadow-lg font-normal h-12 sm:h-16 w-12 sm:w-16 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
-                      <a href="https://wa.me/905419494100?text=Rezervasyon%20bilgisi%20alabilir%20miyim?" target="_blank">
+                      <a href="https://wa.me/905342664183?text=Rezervasyon%20bilgisi%20alabilir%20miyim?" target="_blank">
                         <i class="fab fa-whatsapp fa-2x"></i>
                       </a>
                     </button>
         
-                    <button class="bg-white text-lightBlue-400 shadow-sm hover:shadow-lg font-normal h-12 sm:h-16 w-12 sm:w-16 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+                    {{-- <button class="bg-white text-lightBlue-400 shadow-sm hover:shadow-lg font-normal h-12 sm:h-16 w-12 sm:w-16 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
                       <a href="https://twitter.com/mahiryildizhan" target="_blank">
                         <i class="fab fa-twitter fa-2x"></i>
                       </a>
-                    </button>
+                    </button> --}}
         
-                    <button class="bg-white text-red-500 shadow-sm hover:shadow-lg font-normal h-12 sm:h-16 w-12 sm:w-16 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+                    {{-- <button class="bg-white text-red-500 shadow-sm hover:shadow-lg font-normal h-12 sm:h-16 w-12 sm:w-16 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
                       <a href="https://www.youtube.com/channel/UCzSIjra8EKWS6fIJfNjTQIw" target="_blank">
                         <i class="fab fa-youtube fa-2x"></i>
                       </a>
-                    </button>
+                    </button> --}}
         
                     <button class="bg-white text-red-500 shadow-sm hover:shadow-lg font-normal h-12 sm:h-16 w-12 sm:w-16 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
-                      <a href="https://www.instagram.com/mhryldzhn/" target="_blank">
+                      <a href="https://www.instagram.com/262live/" target="_blank">
                         <i class="fab fa-instagram fa-2x"></i>
                       </a>
                     </button>
