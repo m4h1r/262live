@@ -157,7 +157,7 @@
                 @if ($drink->type=="Bira")
         
                 <div class="bg-gray-900 rounded-xl text-white flex overflow-hidden h-48">
-                    <div class="col-span-1 w-1/3 flex justify-center">
+                    <div class="col-span-1 w-1/3 flex justify-start">
                       @if ( substr($drink->picture, 0, 4) == "http")
                         <img class="object-fill h-full rounded-xl" src="{{ $drink->picture }}" alt="">
                       @else

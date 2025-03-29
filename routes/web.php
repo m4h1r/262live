@@ -23,8 +23,8 @@ Route::middleware('auth')->group(function () {
     Route::get('add', [DrinkController::class, 'create'])->name('add');
     Route::post('insert', [DrinkController::class, 'store'])->name('insert');
     Route::delete('drink/{drink}', [DrinkController::class, 'destroy'])->name('drink.destroy');
-    // Route::get('adages/edit/{id}', [AdageController::class, 'edit']);
-    // Route::put('update-adage/{id}', [AdageController::class, 'update']);
+    Route::get('drink/edit/{id}', [DrinkController::class, 'edit'])->name('drink.edit');
+    Route::put('update-drink/{id}', [DrinkController::class, 'update'])->name('drink.update');
     // Route::delete('adages/{adage}', [AdageController::class, 'destroy'])->name('adage.destroy');
 });
 

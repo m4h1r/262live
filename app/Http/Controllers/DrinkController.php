@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Drink;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use App\Http\Requests\StoreDrinkRequest;
 use App\Http\Requests\UpdateDrinkRequest;
-use Illuminate\Http\Request;
-use App\Models\Drink;
 
 class DrinkController extends Controller
 {
@@ -51,7 +52,7 @@ class DrinkController extends Controller
         {
             $file = $request->file('picture');
             $ext = $file->getClientOriginalExtension();
-            $filename = time().'.'.$ext;
+            $filename = "p".time().'.'.$ext;
             $file->move('assets/img',$filename);
             $drink->picture = $filename;
         }
@@ -73,17 +74,47 @@ class DrinkController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Drink $drink)
+    public function edit($id)
     {
-        //
+        $drink = Drink::where('id', $id)->first();
+
+        return view('drink.update', compact('drink'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateDrinkRequest $request, Drink $drink)
+    public function update(Request $request, $id)
     {
         //
+        $drink = Drink::where('id', $id)->first();
+        
+        $drink->name = $request->input('name');
+        $drink->price = $request->input('price');
+        $drink->brand = $request->input('brand');
+        $drink->type = $request->input('type');
+        $drink->stock = $request->input('stock');
+        $drink->description = $request->input('description');
+        
+        if($request->hasFile('picture'))
+        {
+            $path = 'assets/img/'.$drink->picture;
+            if (File::exists($path))
+            {
+                File::delete($path);
+            }
+
+            $file = $request->file('picture');
+            $ext = $file->getClientOriginalExtension();
+            $filename = "p".time().'.'.$ext;
+            $file->move('assets/img',$filename);
+            $drink->picture = $filename;
+        }
+
+        $drink->save();
+
+        return redirect()->route('drinks')
+                        ->with('success','Ürün başarıyla güncellendi.');
     }
 
     /**

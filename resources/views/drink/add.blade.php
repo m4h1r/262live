@@ -1,9 +1,8 @@
 <x-layouts.app :title="__('262Live Kontrol Paneli')">
     <div class="flex h-full w-full flex-1 flex-col gap-4 rounded-xl">
 
-
-
-        <form class="bg-gray-800 m-2 p-2 rounded-lg text-white" action="{{ route('insert') }}" method="POST" enctype="multipart/form-data">
+        <form class="bg-gray-800 m-2 p-2 rounded-lg text-white" action="{{ route('insert') }}" method="POST"
+            enctype="multipart/form-data">
             @csrf
             <div class="space-y-12">
                 <div class="border-b border-gray-900/10 pb-12">
@@ -65,13 +64,32 @@
                         </div>
 
                         <div class="col-span-full">
-                          <label for="stock" class="block text-sm/6 font-medium text-center">Stok Var/Yok</label>
-                          <div class="m-2">
-                              <div class="flex items-center rounded-md">
-                                  <input type="checkbox" name="stock" id="stock" class="block min-w-0 grow py-1.5 pr-3 pl-1 focus:outline-none sm:text-sm/6" value="1" checked>
-                              </div>
-                          </div>
-                      </div>
+                            <label for="stock" class="block text-sm/6 font-medium ">Stok Durumu</label>
+                            <div class="mt-2 grid grid-cols-1">
+                                <select id="stock" name="stock"
+                                    class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-slate-900 py-1.5 pr-8 pl-3 text-base  outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                                    <option selected value="1">Var</option>
+                                    <option value="0">Tükendi</option>
+                                </select>
+                                <svg class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4"
+                                    viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+                                    <path fill-rule="evenodd"
+                                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        {{-- <div class="col-span-full">
+                            <label for="stock" class="block text-sm/6 font-medium text-center">Stok Var/Yok</label>
+                            <div class="m-2">
+                                <div class="flex items-center rounded-md">
+                                    <input type="checkbox" name="stock" id="stock"
+                                        class="block min-w-0 grow py-1.5 pr-3 pl-1 focus:outline-none sm:text-sm/6"
+                                        value="1" checked>
+                                </div>
+                            </div>
+                        </div> --}}
 
                         <div class="col-span-full">
                             <label for="description" class="block text-sm/6 font-medium ">Açıklama</label>
@@ -108,13 +126,9 @@
             </div>
 
             <div class="mt-6 flex items-center justify-end gap-x-6">
-                <a href="{{route('drinks')}}" type="button" class="bg-yellow-600 m-2 p-2 rounded">İptal Et</a>
+                <a href="{{ route('drinks') }}" type="button" class="bg-yellow-600 m-2 p-2 rounded">İptal Et</a>
                 <button type="submit" class="bg-blue-600 m-2 p-2 rounded">Kaydet</button>
             </div>
         </form>
-
-
-
-
     </div>
 </x-layouts.app>
