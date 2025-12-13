@@ -120,6 +120,10 @@
             </table>
         </div>
 
+        <div class="flex justify-center mt-4">
+            {{ $drinks->links() }}    
+        </div>
+
 
 
     </div>
